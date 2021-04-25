@@ -10,9 +10,10 @@ To use:
  * Wait (it's a 38 hour build on my N40L!)
  * Once the container is finished build the python package and write it to the local FS via volume: 
 
+```
     docker run --gpus all\
            	-it\
            	-v `pwd`:/tf_out\
            	build-tf\
            	/bin/bash -c "cd /root/git/tensorflow && ./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tf_out/tensorflow_pkg"
-
+```
